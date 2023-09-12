@@ -1,0 +1,122 @@
+[
+    {
+      "AccountId": "705235841658",
+      "Arn": "arn:aws:guardduty:us-west-2:705235841658:detector/aac383277b577b38ae7cedc01d59f6b4/finding/c0c5434d5318e3516d7ed4961a230ba1",
+      "CreatedAt": "2023-09-11T23:36:36.657Z",
+      "Description": "10.0.0.223 is performing RDP brute force attacks against i-04b773ca5bfce3077. Brute force attacks are used to gain unauthorized access to your instance by guessing the RDP password.",
+      "Id": "c0c5434d5318e3516d7ed4961a230ba1",
+      "Partition": "aws",
+      "Region": "us-west-2",
+      "Resource": {
+        "InstanceDetails": {
+          "AvailabilityZone": "us-west-2a",
+          "ImageDescription": "Windows Server 2008v2",
+          "ImageId": "ami-060f341a6691feb7e",
+          "InstanceId": "i-04b773ca5bfce3077",
+          "InstanceState": "running",
+          "InstanceType": "t3.medium",
+          "OutpostArn": null,
+          "LaunchTime": "2023-09-07T20:10:21.000Z",
+          "NetworkInterfaces": [
+            {
+              "Ipv6Addresses": [],
+              "NetworkInterfaceId": "eni-0f60e518004711467",
+              "PrivateDnsName": null,
+              "PrivateIpAddress": "10.0.0.82",
+              "PrivateIpAddresses": [
+                {
+                  "PrivateDnsName": null,
+                  "PrivateIpAddress": "10.0.0.82"
+                }
+              ],
+              "SecurityGroups": [
+                {
+                  "GroupId": "sg-03acd6ea083e8f948",
+                  "GroupName": "Final-401d8-SG-1V5RZ9S08IUU7"
+                }
+              ],
+              "SubnetId": "subnet-0d197a60468926f5a",
+              "VpcId": "vpc-0ea3a7655bad639eb"
+            }
+          ],
+          "Platform": "windows",
+          "ProductCodes": [],
+          "Tags": [
+            {
+              "Key": "aws:cloudformation:logical-id",
+              "Value": "Metasploitable3"
+            },
+            {
+              "Key": "aws:cloudformation:stack-name",
+              "Value": "Final-401d8"
+            },
+            {
+              "Key": "Name",
+              "Value": "Target - Metasploitable3 (WinServ 2008)"
+            },
+            {
+              "Key": "aws:cloudformation:stack-id",
+              "Value": "arn:aws:cloudformation:us-west-2:705235841658:stack/Final-401d8/7b878980-4dba-11ee-86f3-061483d0b2e1"
+            }
+          ]
+        },
+        "ResourceType": "Instance"
+      },
+      "SchemaVersion": "2.0",
+      "Service": {
+        "Action": {
+          "ActionType": "NETWORK_CONNECTION",
+          "NetworkConnectionAction": {
+            "Blocked": false,
+            "ConnectionDirection": "INBOUND",
+            "LocalPortDetails": {
+              "Port": 3389,
+              "PortName": "RDP"
+            },
+            "Protocol": "TCP",
+            "LocalIpDetails": {
+              "IpAddressV4": "10.0.0.82"
+            },
+            "RemoteIpDetails": {
+              "City": {
+                "CityName": ""
+              },
+              "Country": {
+                "CountryName": null
+              },
+              "GeoLocation": {
+                "Lat": 0,
+                "Lon": 0
+              },
+              "IpAddressV4": "10.0.0.223",
+              "Organization": {
+                "Asn": "0",
+                "AsnOrg": "",
+                "Isp": "",
+                "Org": ""
+              }
+            },
+            "RemotePortDetails": {
+              "Port": 32776,
+              "PortName": "Unknown"
+            }
+          }
+        },
+        "Archived": false,
+        "Count": 48,
+        "DetectorId": "aac383277b577b38ae7cedc01d59f6b4",
+        "EventFirstSeen": "2023-09-11T23:33:38.000Z",
+        "EventLastSeen": "2023-09-12T18:15:07.000Z",
+        "ResourceRole": "TARGET",
+        "ServiceName": "guardduty",
+        "AdditionalInfo": {
+          "Value": "{}",
+          "Type": "default"
+        }
+      },
+      "Severity": 2,
+      "Title": "10.0.0.223 is performing RDP brute force attacks against i-04b773ca5bfce3077.",
+      "Type": "UnauthorizedAccess:EC2/RDPBruteForce",
+      "UpdatedAt": "2023-09-12T18:16:49.336Z"
+    }
+  ]
