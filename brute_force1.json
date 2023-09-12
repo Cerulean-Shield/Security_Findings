@@ -1,0 +1,117 @@
+[
+    {
+      "AccountId": "705235841658",
+      "Arn": "arn:aws:guardduty:us-west-2:705235841658:detector/aac383277b577b38ae7cedc01d59f6b4/finding/9cc54350d0303308ddcab42c155920de",
+      "CreatedAt": "2023-09-11T23:44:13.920Z",
+      "Description": "i-03db145e581bde784 is performing SSH brute force attacks against 10.0.0.175. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password.",
+      "Id": "9cc54350d0303308ddcab42c155920de",
+      "Partition": "aws",
+      "Region": "us-west-2",
+      "Resource": {
+        "InstanceDetails": {
+          "AvailabilityZone": "us-west-2a",
+          "ImageDescription": "OpenVPN for 401 Final",
+          "ImageId": "ami-05b626bf21fd755ee",
+          "InstanceId": "i-03db145e581bde784",
+          "InstanceState": "running",
+          "InstanceType": "t2.micro",
+          "OutpostArn": null,
+          "LaunchTime": "2023-09-07T21:43:38.000Z",
+          "NetworkInterfaces": [
+            {
+              "Ipv6Addresses": [],
+              "NetworkInterfaceId": "eni-04eb09e0645825493",
+              "PrivateDnsName": null,
+              "PrivateIpAddress": "10.0.0.223",
+              "PrivateIpAddresses": [
+                {
+                  "PrivateDnsName": null,
+                  "PrivateIpAddress": "10.0.0.223"
+                }
+              ],
+              "PublicDnsName": "",
+              "PublicIp": "35.92.65.0",
+              "SecurityGroups": [
+                {
+                  "GroupId": "sg-098e454229a2103ef",
+                  "GroupName": "Final-401d8-OpenVpnSG-7F2Z89F8VWO0"
+                }
+              ],
+              "SubnetId": "subnet-0d197a60468926f5a",
+              "VpcId": "vpc-0ea3a7655bad639eb"
+            }
+          ],
+          "Platform": null,
+          "ProductCodes": [
+            {
+              "Code": "8icvdraalzbfrdevgamoddblf",
+              "ProductType": "marketplace"
+            }
+          ],
+          "Tags": [
+            {
+              "Key": "Name",
+              "Value": "Tool - OpenVPN Server V2"
+            }
+          ]
+        },
+        "ResourceType": "Instance"
+      },
+      "SchemaVersion": "2.0",
+      "Service": {
+        "Action": {
+          "ActionType": "NETWORK_CONNECTION",
+          "NetworkConnectionAction": {
+            "Blocked": false,
+            "ConnectionDirection": "OUTBOUND",
+            "LocalPortDetails": {
+              "Port": 33038,
+              "PortName": "Unknown"
+            },
+            "Protocol": "TCP",
+            "LocalIpDetails": {
+              "IpAddressV4": "10.0.0.223"
+            },
+            "RemoteIpDetails": {
+              "City": {
+                "CityName": ""
+              },
+              "Country": {
+                "CountryName": null
+              },
+              "GeoLocation": {
+                "Lat": 0,
+                "Lon": 0
+              },
+              "IpAddressV4": "10.0.0.175",
+              "Organization": {
+                "Asn": "0",
+                "AsnOrg": "",
+                "Isp": "",
+                "Org": ""
+              }
+            },
+            "RemotePortDetails": {
+              "Port": 22,
+              "PortName": "SSH"
+            }
+          }
+        },
+        "Archived": false,
+        "Count": 25,
+        "DetectorId": "aac383277b577b38ae7cedc01d59f6b4",
+        "EventFirstSeen": "2023-09-11T23:29:27.000Z",
+        "EventLastSeen": "2023-09-12T17:49:39.000Z",
+        "ResourceRole": "ACTOR",
+        "ServiceName": "guardduty",
+        "AdditionalInfo": {
+          "Value": "{}",
+          "Type": "default"
+        }
+      },
+      "Severity": 8,
+      "Title": "i-03db145e581bde784 is performing SSH brute force attacks against 10.0.0.175.",
+      "Type": "UnauthorizedAccess:EC2/SSHBruteForce",
+      "UpdatedAt": "2023-09-12T17:52:14.799Z"
+    }
+  ]
