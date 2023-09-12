@@ -1,2 +1,5 @@
 # Security_Findings
-JSON files, reports and other findings from our threat hunting
+
+These are the JSON files, reports, research and other products we produced as we did our threat hunting. 
+
+JSON files are downloaded from event alerts in AWS GuardDuty. 
